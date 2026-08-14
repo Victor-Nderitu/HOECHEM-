@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Hoechem SACCO Ltd.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#7684ae",
+                        "surface-container-highest": "#e1e2e4",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "tertiary": "#050200",
+                        "background": "#f8f9fb",
+                        "primary-fixed-dim": "#b7c5f3",
+                        "on-secondary-fixed": "#00210d",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffddae",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#edeef0",
+                        "on-tertiary-container": "#b27a01",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-primary-fixed": "#091a3e",
+                        "surface-bright": "#f8f9fb",
+                        "primary": "#00020d",
+                        "secondary-fixed-dim": "#78db95",
+                        "primary-container": "#0b1b3f",
+                        "surface-tint": "#4f5d85",
+                        "secondary": "#006d38",
+                        "surface-variant": "#e1e2e4",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c5c6cf",
+                        "primary-fixed": "#dae2ff",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#94f8af",
+                        "surface": "#f8f9fb",
+                        "on-background": "#191c1e",
+                        "tertiary-container": "#2a1a00",
+                        "on-primary-fixed-variant": "#38466c",
+                        "on-secondary-container": "#00743c",
+                        "surface-container-high": "#e7e8ea",
+                        "on-surface": "#191c1e",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#75777f",
+                        "inverse-surface": "#2e3132",
+                        "on-secondary-fixed-variant": "#005229",
+                        "surface-dim": "#d9dadc",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#b7c5f3",
+                        "on-tertiary-fixed": "#281800",
+                        "tertiary-fixed-dim": "#fcbb4a",
+                        "secondary-container": "#94f8af",
+                        "on-surface-variant": "#45464e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "base": "4px",
+                        "margin-mobile": "16px",
+                        "section-gap": "80px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["13px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .accordion-content {
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 200px;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .open .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-[80px]">
+<!-- Utility Bar -->
+<div class="fixed top-0 w-full h-[40px] bg-primary-container text-on-primary flex items-center justify-end px-margin-desktop z-50 font-label-sm text-label-sm">
+<a class="hover:text-secondary-fixed transition-colors mr-6" href="#">Contact</a>
+<a class="hover:text-secondary-fixed transition-colors" href="#">Member Login</a>
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-[40px] w-full z-50 flex flex-col items-center px-margin-desktop bg-surface-container-lowest border-b border-outline-variant shadow-sm h-[80px] justify-center transition-all">
+<div class="flex items-center justify-between w-full max-w-[1200px]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="account_balance">account_balance</span>
+<h1 class="text-primary font-display-lg text-[24px]">Hoechem SACCO Ltd.</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">About Us</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Membership</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Loans</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Savings</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">News &amp; Events</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Resources</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1" href="#">Contact Us</a>
+</nav>
+<button class="bg-primary-container text-on-primary font-label-sm text-label-sm px-6 py-2 rounded-xl font-bold hover:bg-opacity-90 transition-all shadow-sm">
+                Member Portal
+            </button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col gap-section-gap mt-10">
+<!-- Hero Section -->
+<section class="text-center max-w-3xl mx-auto">
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Get in Touch</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We're here to help you build a better financial future. Reach out to us with any questions about membership, loans, or savings.</p>
+</section>
+<!-- Bento Grid: Contact & Form -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Contact Info -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-8 shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-surface-container flex flex-col gap-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Hoechem SACCO Ltd.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Together, We Build Better Futures.</p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-[#EAF0FA] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-primary mb-1">Address</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Industrial Area<br/>Nairobi, Kenya</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-[#E7F5EC] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-primary mb-1">Phone</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">+254 703 753 777</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-[#EAF0FA] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container" data-icon="mail">mail</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-primary mb-1">Email</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">info@hoechemsacco.co.ke</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-[#E7F5EC] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary" data-icon="schedule">schedule</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-primary mb-1">Business Hours</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Mon - Fri: 8:00 AM - 5:00 PM<br/>Sat: 9:00 AM - 1:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-8 shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-surface-container">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Send us a Message</h2>
+<form class="flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface" for="name">Full Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface" for="email">Email Address</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" id="email" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface" for="phone">Phone Number</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" id="phone" placeholder="+254..." type="tel"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface" for="message">Message</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors resize-none" id="message" placeholder="How can we help you today?" rows="4"></textarea>
+</div>
+<button class="bg-primary-container text-on-primary font-label-sm text-label-sm px-8 py-4 rounded-xl font-bold hover:bg-opacity-90 transition-all shadow-sm w-full md:w-auto self-start mt-2" type="submit">
+                        Send Message
+                    </button>
+</form>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full h-[400px] rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-surface-container">
+<img alt="Map Location" class="w-full h-full object-cover" data-alt="A highly detailed, professional map interface showing the Industrial Area of Nairobi, Kenya. The map style is modern and clean, utilizing a sophisticated color palette of subtle grays, pale blues, and distinct white roads. A prominent, stylized marker pin in a rich navy blue or forest green highlights a specific location, indicating a financial institution's headquarters. The lighting is even and flat, typical of high-end UI map designs, creating a corporate, reliable, and trustworthy aesthetic suitable for a bank-grade web application." data-location="Nairobi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDim7XV_0q6V7Gq4mbePZiUNICTB8WoYmnkHGeBitgLBq7qmIE5VLl6YkPvb15jgXU7l9ICOKqWGUUgMjdbdtaaMelnw2e2gtL9cVIpmc0t5yaY_W4kJRzJPzGQLk711OrWauIdsmcFz0T7uq5s3lB5mZ3H14CmaOk7L4GutAiqaiwmDBx2toKKWVME7T0Ry1iReVxwgN4vweThd94L75MesuzDQl1uPgR4IFB6vS9gLBBzPoUaN83m"/>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-4xl mx-auto w-full">
+<h2 class="font-display-lg text-display-lg text-primary text-center mb-10">Frequently Asked Questions</h2>
+<div class="flex flex-col gap-4">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-container-lowest border border-surface-container rounded-xl shadow-[0px_4px_20px_rgba(11,27,63,0.02)] overflow-hidden">
+<button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-surface-bright transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-[18px] text-primary font-semibold">Who can join?</span>
+<span class="material-symbols-outlined text-on-surface-variant accordion-icon" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content px-6">
+<p class="font-body-md text-body-md text-on-surface-variant pb-5">Membership is open to all individuals and organizations that share our values and meet our basic eligibility criteria. Please contact our support team for specific requirements.</p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-container-lowest border border-surface-container rounded-xl shadow-[0px_4px_20px_rgba(11,27,63,0.02)] overflow-hidden">
+<button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-surface-bright transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-[18px] text-primary font-semibold">How is loan processing done?</span>
+<span class="material-symbols-outlined text-on-surface-variant accordion-icon" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content px-6">
+<p class="font-body-md text-body-md text-on-surface-variant pb-5">Loan processing is streamlined for members. Once you submit your application and required documents, our credit team reviews it within 48 hours for standard loans.</p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-container-lowest border border-surface-container rounded-xl shadow-[0px_4px_20px_rgba(11,27,63,0.02)] overflow-hidden">
+<button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-surface-bright transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-[18px] text-primary font-semibold">Can I increase my savings?</span>
+<span class="material-symbols-outlined text-on-surface-variant accordion-icon" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content px-6">
+<p class="font-body-md text-body-md text-on-surface-variant pb-5">Yes, members can increase their monthly savings contributions at any time by filling out an amendment form available at our offices or through the member portal.</p>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="bg-surface-container-lowest border border-surface-container rounded-xl shadow-[0px_4px_20px_rgba(11,27,63,0.02)] overflow-hidden">
+<button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-surface-bright transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-[18px] text-primary font-semibold">How are dividends decided?</span>
+<span class="material-symbols-outlined text-on-surface-variant accordion-icon" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content px-6">
+<p class="font-body-md text-body-md text-on-surface-variant pb-5">Dividends are declared annually during the General Meeting, based on the SACCO's financial performance and profitability for the preceding financial year.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container text-on-primary-fixed grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap w-full mt-20">
+<div class="col-span-1 md:col-span-4 flex justify-between items-center mb-8 border-b border-surface-tint pb-8">
+<span class="font-display-lg text-[24px] text-secondary-fixed">Hoechem SACCO Ltd.</span>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Home</a>
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">About Us</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Membership</a>
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Loans</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Savings</a>
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">News &amp; Events</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Resources</a>
+<a class="font-body-md text-body-md text-secondary-fixed opacity-90 hover:opacity-100" href="#">Contact Us</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-surface-tint">
+<p class="font-body-md text-body-md text-surface-variant text-sm">© 2024 Hoechem SACCO Ltd. Together, We Build Better Futures.</p>
+</div>
+</footer>
+<script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            
+            // Close others
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                if (item !== content) {
+                    item.classList.remove('open');
+                    item.parentElement.classList.remove('open');
+                }
+            });
+
+            // Toggle current
+            content.classList.toggle('open');
+            parent.classList.toggle('open');
+        }
+    </script>
+</body></html>

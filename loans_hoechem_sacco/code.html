@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hoechem SACCO - Loan Products</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-container": "#7684ae",
+                      "surface-container-highest": "#e1e2e4",
+                      "on-tertiary-fixed-variant": "#604100",
+                      "tertiary": "#050200",
+                      "background": "#f8f9fb",
+                      "primary-fixed-dim": "#b7c5f3",
+                      "on-secondary-fixed": "#00210d",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#ffddae",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#edeef0",
+                      "on-tertiary-container": "#b27a01",
+                      "inverse-on-surface": "#f0f1f3",
+                      "on-primary-fixed": "#091a3e",
+                      "surface-bright": "#f8f9fb",
+                      "primary": "#00020d",
+                      "secondary-fixed-dim": "#78db95",
+                      "primary-container": "#0b1b3f",
+                      "surface-tint": "#4f5d85",
+                      "secondary": "#006d38",
+                      "surface-variant": "#e1e2e4",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#c5c6cf",
+                      "primary-fixed": "#dae2ff",
+                      "on-error-container": "#93000a",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed": "#94f8af",
+                      "surface": "#f8f9fb",
+                      "on-background": "#191c1e",
+                      "tertiary-container": "#2a1a00",
+                      "on-primary-fixed-variant": "#38466c",
+                      "on-secondary-container": "#00743c",
+                      "surface-container-high": "#e7e8ea",
+                      "on-surface": "#191c1e",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f2f4f6",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#75777f",
+                      "inverse-surface": "#2e3132",
+                      "on-secondary-fixed-variant": "#005229",
+                      "surface-dim": "#d9dadc",
+                      "on-secondary": "#ffffff",
+                      "inverse-primary": "#b7c5f3",
+                      "on-tertiary-fixed": "#281800",
+                      "tertiary-fixed-dim": "#fcbb4a",
+                      "secondary-container": "#94f8af",
+                      "on-surface-variant": "#45464e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "base": "4px",
+                      "margin-mobile": "16px",
+                      "section-gap": "80px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "17px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "15px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg antialiased">
+<!-- Utility Bar -->
+<div class="h-10 bg-primary-container text-on-primary flex items-center justify-between px-margin-mobile md:px-margin-desktop text-label-sm font-label-sm w-full z-50 relative">
+<div class="flex items-center space-x-4">
+<span class="flex items-center"><span class="material-symbols-outlined text-[16px] mr-1">call</span> 0700 000 000</span>
+<span class="flex items-center hidden md:flex"><span class="material-symbols-outlined text-[16px] mr-1">mail</span> info@hoechemsacco.co.ke</span>
+</div>
+<div class="flex items-center space-x-4">
+<a class="hover:text-secondary transition-colors" href="#">Help Center</a>
+</div>
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-10 w-full z-50 flex flex-col items-center px-margin-desktop bg-surface-container-lowest dark:bg-surface-dim border-b border-outline-variant shadow-sm hidden md:flex h-20 justify-center">
+<div class="w-full max-w-[1200px] flex items-center justify-between">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[32px] text-primary dark:text-primary-fixed mr-2">account_balance</span>
+<span class="font-display-lg text-primary dark:text-primary-fixed text-headline-md">Hoechem SACCO Ltd.</span>
+</div>
+<nav class="flex space-x-6">
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">About Us</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Membership</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1" href="#">Loans</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Savings</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">News &amp; Events</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Resources</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Contact Us</a>
+</nav>
+<div>
+<a class="bg-primary-container text-on-primary px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity" href="#">Member Portal</a>
+</div>
+</div>
+</header>
+<!-- Mobile Header (Placeholder for md:hidden logic) -->
+<div class="md:hidden flex items-center justify-between p-margin-mobile bg-surface-container-lowest border-b border-outline-variant">
+<span class="font-headline-md text-primary">Hoechem SACCO</span>
+<span class="material-symbols-outlined">menu</span>
+</div>
+<main class="pt-[120px] pb-section-gap max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-section-gap">
+<div>
+<div class="flex items-center space-x-2 text-on-surface-variant font-label-sm text-label-sm mb-6">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-bold">Loans</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-2">Loan Products</h1>
+<h2 class="font-headline-md text-headline-md text-secondary mb-6">Solutions that fit your life</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">
+                    Whether you are building a home, educating your children, or managing an emergency, Hoechem SACCO provides affordable and flexible credit facilities tailored to support your financial journey.
+                </p>
+<div class="flex space-x-4">
+<button class="bg-primary-container text-on-primary px-6 py-3 rounded-xl font-label-sm text-label-sm hover:opacity-90 transition-opacity">Apply Now</button>
+<button class="border border-secondary text-secondary px-6 py-3 rounded-xl font-label-sm text-label-sm hover:bg-surface-container-low transition-colors">Loan Calculator</button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute inset-0 bg-primary-fixed-dim rounded-2xl transform translate-x-4 translate-y-4"></div>
+<img alt="Member reviewing loan options" class="w-full h-[500px] object-cover rounded-2xl relative z-10 shadow-[0px_4px_20px_rgba(11,27,63,0.1)]" data-alt="A professional, high-quality portrait of a smiling African woman reviewing financial documents on a tablet in a bright, modern office space. The lighting is soft and natural, emphasizing credibility and warmth. The overall color palette features subtle green and navy accents, fitting a corporate modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtqc5iaNNyfu_8ihVDJaLSNeWmaMdKAXflOeW4nbmsKVcyNGIy4_FMYaSzsT462lELT9zshENIaxSkh40q_3583ETiEtb4et2E_9G3vnU1mTN8AMjZ33Xt3QgtR19GD0q-amgT9y60YmQ7x6MWSq9twMAFK8HKGsSt9CV6A4ORzglcjrFtzuLgzw5hOSfo2s7ZyNbKEbuYss5pS6RxOXPDXlZjXpB2KDymxqN3ByZJ_BXilttAM8bY"/>
+<!-- Floating Badges -->
+<div class="absolute top-10 -left-6 bg-surface-container-lowest p-4 rounded-xl shadow-[0px_4px_20px_rgba(11,27,63,0.1)] z-20 flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-[#E7F5EC] flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">percent</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-primary">Affordable</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Low Rates</p>
+</div>
+</div>
+<div class="absolute bottom-10 -right-6 bg-surface-container-lowest p-4 rounded-xl shadow-[0px_4px_20px_rgba(11,27,63,0.1)] z-20 flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-[#EAF0FA] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">calendar_month</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-primary">Flexible</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Up to 60 Months</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Loan Products Grid -->
+<section class="mb-section-gap">
+<h3 class="font-headline-md text-headline-md text-primary mb-8 text-center">Our Loan Facilities</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Development Loan -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-outline-variant/30 hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 rounded-full bg-[#E7F5EC] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">foundation</span>
+</div>
+<h4 class="font-label-sm text-label-sm text-primary mb-2 text-lg">Development Loan</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Long-term financing for major projects, investments, or asset acquisition.</p>
+<div class="flex justify-between items-center border-t border-surface-container-highest pt-4">
+<div>
+<p class="text-[11px] font-label-sm text-on-surface-variant uppercase tracking-wide">Rate</p>
+<p class="font-label-sm text-primary">12% p.a</p>
+</div>
+<div class="text-right">
+<p class="text-[11px] font-label-sm text-on-surface-variant uppercase tracking-wide">Max Period</p>
+<p class="font-label-sm text-primary">60 Months</p>
+</div>
+</div>
+</div>
+<!-- School Fees Loan -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-outline-variant/30 hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 rounded-full bg-[#EAF0FA] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<h4 class="font-label-sm text-label-sm text-primary mb-2 text-lg">School Fees Loan</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Secure your children's future with affordable education financing.</p>
+<div class="flex justify-between items-center border-t border-surface-container-highest pt-4">
+<div>
+<p class="text-[11px] font-label-sm text-on-surface-variant uppercase tracking-wide">Rate</p>
+<p class="font-label-sm text-primary">12% p.a</p>
+</div>
+<div class="text-right">
+<p class="text-[11px] font-label-sm text-on-surface-variant uppercase tracking-wide">Max Period</p>
+<p class="font-label-sm text-primary">12 Months</p>
+</div>
+</div>
+</div>
+<!-- Emergency Loan -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-outline-variant/30 hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 rounded-full bg-error-container/50 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+<h4 class="font-label-sm text-label-sm text-primary mb-2 text-lg">Emergency Loan</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Quick access to funds for unforeseen urgent situations.</p>
+<div class="flex justify-between items-center border-t border-surface-container-highest pt-4">
+<div>
+<p class="text-[11px] font-label-sm text-on-surface-variant uppercase tracking-wide">Rate</p>
+<p class="font-label-sm text-primary">12% p.a</p>
+</div>
+<div class="text-right">
+<p class="text-[11px] font-label-sm text-on-surface-variant uppercase tracking-wide">Max Period</p>
+<p class="font-label-sm text-primary">12 Months</p>
+</div>
+</div>
+</div>
+<!-- Refinancing Loan -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-outline-variant/30 hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 rounded-full bg-[#E7F5EC] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">sync</span>
+</div>
+<h4 class="font-label-sm text-label-sm text-primary mb-2 text-lg">Refinancing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Consolidate existing debts to better manage your cash flow.</p>
+<div class="flex justify-between items-center border-t border-surface-container-highest pt-4">
+<div>
+<p class="text-[11px] font-label-sm text-on-surface-variant uppercase tracking-wide">Rate</p>
+<p class="font-label-sm text-primary">12% p.a</p>
+</div>
+<div class="text-right">
+<p class="text-[11px] font-label-sm text-on-surface-variant uppercase tracking-wide">Max Period</p>
+<p class="font-label-sm text-primary">Varies</p>
+</div>
+</div>
+</div>
+<!-- Restructuring Loan -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-outline-variant/30 hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 rounded-full bg-[#EAF0FA] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+</div>
+<h4 class="font-label-sm text-label-sm text-primary mb-2 text-lg">Restructuring</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Adjust your current loan terms to suit changing financial circumstances.</p>
+<div class="flex justify-between items-center border-t border-surface-container-highest pt-4">
+<div>
+<p class="text-[11px] font-label-sm text-on-surface-variant uppercase tracking-wide">Rate</p>
+<p class="font-label-sm text-primary">12% p.a</p>
+</div>
+<div class="text-right">
+<p class="text-[11px] font-label-sm text-on-surface-variant uppercase tracking-wide">Max Period</p>
+<p class="font-label-sm text-primary">Varies</p>
+</div>
+</div>
+</div>
+<!-- Short Term / Mobile Loans Grouping -->
+<div class="grid grid-rows-2 gap-6">
+<!-- M-Pesa Loan -->
+<div class="bg-primary-container rounded-2xl p-6 shadow-[0px_4px_20px_rgba(11,27,63,0.1)] text-on-primary">
+<div class="flex items-center justify-between mb-2">
+<h4 class="font-label-sm text-label-sm text-lg">M-Pesa Loan</h4>
+<span class="material-symbols-outlined text-secondary-fixed">smartphone</span>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div>
+<p class="text-[11px] font-label-sm text-on-primary-container uppercase tracking-wide">Rate</p>
+<p class="font-label-sm text-white">5% p.m</p>
+</div>
+<div class="text-right">
+<p class="text-[11px] font-label-sm text-on-primary-container uppercase tracking-wide">Term</p>
+<p class="font-label-sm text-white">1 Month</p>
+</div>
+</div>
+</div>
+<!-- Digital Loan -->
+<div class="bg-secondary rounded-2xl p-6 shadow-[0px_4px_20px_rgba(11,27,63,0.1)] text-on-secondary">
+<div class="flex items-center justify-between mb-2">
+<h4 class="font-label-sm text-label-sm text-lg">Digital Loan</h4>
+<span class="material-symbols-outlined text-secondary-fixed">wifi</span>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div>
+<p class="text-[11px] font-label-sm text-secondary-container uppercase tracking-wide">Rate</p>
+<p class="font-label-sm text-white">7.5% p.m</p>
+</div>
+<div class="text-right">
+<p class="text-[11px] font-label-sm text-secondary-container uppercase tracking-wide">Term</p>
+<p class="font-label-sm text-white">1 Month</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Info Strip Section (Bento Layout) -->
+<section class="mb-section-gap grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Important Info -->
+<div class="bg-surface-container-low rounded-2xl p-8 border border-surface-container-highest">
+<div class="flex items-center mb-4">
+<span class="material-symbols-outlined text-primary-container mr-3">info</span>
+<h4 class="font-headline-md text-[20px] text-primary">Important Info</h4>
+</div>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex items-start"><span class="material-symbols-outlined text-secondary mr-2 text-[18px]">check_circle</span>Maximum repayment period for major loans is 60 months.</li>
+<li class="flex items-start"><span class="material-symbols-outlined text-secondary mr-2 text-[18px]">check_circle</span>Loans are granted up to 3 times your core deposits.</li>
+<li class="flex items-start"><span class="material-symbols-outlined text-secondary mr-2 text-[18px]">check_circle</span>Guarantors or collaterals may be required based on the loan type.</li>
+</ul>
+</div>
+<!-- Why Borrow With Us -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-outline-variant/30">
+<div class="flex items-center mb-4">
+<span class="material-symbols-outlined text-secondary mr-3">verified</span>
+<h4 class="font-headline-md text-[20px] text-primary">Why Borrow With Us?</h4>
+</div>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex items-center"><span class="material-symbols-outlined text-primary-container mr-2 text-[18px]">done</span> Competitive, flat interest rates.</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-primary-container mr-2 text-[18px]">done</span> Fast processing and disbursement.</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-primary-container mr-2 text-[18px]">done</span> No hidden charges or penalties on early repayment.</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-primary-container mr-2 text-[18px]">done</span> Flexible restructuring options.</li>
+</ul>
+</div>
+<!-- Contact CTA -->
+<div class="bg-primary-container rounded-2xl p-8 text-on-primary flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-[48px] text-secondary-fixed mb-4">support_agent</span>
+<h4 class="font-headline-md text-[20px] mb-2">Need Guidance?</h4>
+<p class="font-body-md text-on-primary-container mb-6">Speak to our loan officers to find the perfect facility for your needs.</p>
+<button class="bg-white text-primary-container px-6 py-2 rounded-lg font-label-sm text-label-sm w-full hover:bg-surface-container-low transition-colors">Contact Us</button>
+</div>
+</section>
+</main>
+<!-- Closing Navy Stat Bar -->
+<div class="w-full bg-primary-container text-on-primary py-12 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-on-primary-container/30">
+<div class="py-4 md:py-0">
+<p class="font-display-lg text-secondary-fixed mb-1">10k+</p>
+<p class="font-label-sm text-on-primary-container uppercase tracking-wide">Active Members</p>
+</div>
+<div class="py-4 md:py-0">
+<p class="font-display-lg text-white mb-1">Kes 5B+</p>
+<p class="font-label-sm text-on-primary-container uppercase tracking-wide">Loans Disbursed</p>
+</div>
+<div class="py-4 md:py-0 flex flex-col justify-center">
+<h4 class="font-headline-md text-white">Together, We Build Better Futures</h4>
+</div>
+</div>
+</div>
+<!-- Footer from JSON -->
+<footer class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap w-full bg-primary-container dark:bg-tertiary-container text-on-primary-fixed dark:text-on-tertiary-fixed border-t border-outline-variant/10 mt-auto">
+<div class="col-span-1 md:col-span-4 flex justify-between items-center border-b border-on-primary-container/20 pb-8 mb-8">
+<div class="font-display-lg text-secondary-fixed text-headline-md">Hoechem SACCO Ltd.</div>
+<div class="text-surface-variant font-body-md text-sm">© 2024 Hoechem SACCO Ltd. Together, We Build Better Futures.</div>
+</div>
+<!-- Links representation (simplified for layout) -->
+<div class="flex flex-col space-y-2">
+<h5 class="text-white font-headline-md text-[16px] mb-4">Quick Links</h5>
+<a class="text-surface-variant font-body-md text-body-md hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Home</a>
+<a class="text-surface-variant font-body-md text-body-md hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">About Us</a>
+<a class="text-surface-variant font-body-md text-body-md hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Membership</a>
+</div>
+<div class="flex flex-col space-y-2">
+<h5 class="text-white font-headline-md text-[16px] mb-4">Products</h5>
+<a class="text-secondary-fixed font-body-md text-body-md hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Loans</a>
+<a class="text-surface-variant font-body-md text-body-md hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Savings</a>
+</div>
+<div class="flex flex-col space-y-2">
+<h5 class="text-white font-headline-md text-[16px] mb-4">Media</h5>
+<a class="text-surface-variant font-body-md text-body-md hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">News &amp; Events</a>
+<a class="text-surface-variant font-body-md text-body-md hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Resources</a>
+</div>
+<div class="flex flex-col space-y-2">
+<h5 class="text-white font-headline-md text-[16px] mb-4">Support</h5>
+<a class="text-surface-variant font-body-md text-body-md hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Contact Us</a>
+</div>
+</footer>
+</body></html>

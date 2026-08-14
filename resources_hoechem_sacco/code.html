@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resources - Hoechem SACCO Ltd.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#7684ae",
+                    "surface-container-highest": "#e1e2e4",
+                    "on-tertiary-fixed-variant": "#604100",
+                    "tertiary": "#050200",
+                    "background": "#f8f9fb",
+                    "primary-fixed-dim": "#b7c5f3",
+                    "on-secondary-fixed": "#00210d",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#ffddae",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#edeef0",
+                    "on-tertiary-container": "#b27a01",
+                    "inverse-on-surface": "#f0f1f3",
+                    "on-primary-fixed": "#091a3e",
+                    "surface-bright": "#f8f9fb",
+                    "primary": "#00020d",
+                    "secondary-fixed-dim": "#78db95",
+                    "primary-container": "#0b1b3f",
+                    "surface-tint": "#4f5d85",
+                    "secondary": "#006d38",
+                    "surface-variant": "#e1e2e4",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c5c6cf",
+                    "primary-fixed": "#dae2ff",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#94f8af",
+                    "surface": "#f8f9fb",
+                    "on-background": "#191c1e",
+                    "tertiary-container": "#2a1a00",
+                    "on-primary-fixed-variant": "#38466c",
+                    "on-secondary-container": "#00743c",
+                    "surface-container-high": "#e7e8ea",
+                    "on-surface": "#191c1e",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#75777f",
+                    "inverse-surface": "#2e3132",
+                    "on-secondary-fixed-variant": "#005229",
+                    "surface-dim": "#d9dadc",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#b7c5f3",
+                    "on-tertiary-fixed": "#281800",
+                    "tertiary-fixed-dim": "#fcbb4a",
+                    "secondary-container": "#94f8af",
+                    "on-surface-variant": "#45464e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "base": "4px",
+                    "margin-mobile": "16px",
+                    "section-gap": "80px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Inter"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "body-lg": [
+                            "17px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-sm": [
+                            "13px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "15px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-lg flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex flex-col items-center px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-b border-outline-variant shadow-sm h-20 md:h-24">
+<div class="flex items-center justify-between w-full h-full max-w-[1200px] mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+<span class="font-display-lg-mobile md:font-display-lg text-primary text-xl md:text-2xl font-bold tracking-tight">Hoechem SACCO Ltd.</span>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8 h-full">
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">About Us</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Membership</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Loans</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Savings</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">News &amp; Events</a>
+<a class="text-secondary font-bold border-b-2 border-secondary h-full flex items-center" href="#">Resources</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Contact Us</a>
+</nav>
+<button class="bg-primary-container text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg font-bold scale-95 active:opacity-80 transition-all hover:bg-opacity-90 hidden md:block">
+                Member Portal
+            </button>
+<!-- Mobile Menu Toggle (Decorative) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24 md:pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto w-full">
+<!-- Page Header -->
+<div class="mb-12">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Resources &amp; Downloads</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Access all necessary forms and documents for your membership, loan applications, and general SACCO operations.</p>
+</div>
+<!-- Downloads Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Item 1: Membership Form -->
+<div class="bg-surface-container-lowest p-6 rounded-[16px] shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-surface-container-highest flex items-start gap-4 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-[#EAF0FA] rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-[18px] font-semibold text-primary mb-1">Membership Form</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Form required for joining the SACCO.</p>
+<div class="flex items-center gap-3 text-sm text-outline">
+<span>PDF</span>
+<span>•</span>
+<span>1.2 MB</span>
+</div>
+</div>
+<button aria-label="Download Membership Form" class="bg-secondary text-on-secondary w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 hover:bg-opacity-90 transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<!-- Item 2: Loan Form -->
+<div class="bg-surface-container-lowest p-6 rounded-[16px] shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-surface-container-highest flex items-start gap-4 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-[#EAF0FA] rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-[18px] font-semibold text-primary mb-1">Loan Application Form</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Apply for various loan products.</p>
+<div class="flex items-center gap-3 text-sm text-outline">
+<span>PDF</span>
+<span>•</span>
+<span>2.5 MB</span>
+</div>
+</div>
+<button aria-label="Download Loan Form" class="bg-secondary text-on-secondary w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 hover:bg-opacity-90 transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<!-- Item 3: Withdrawal Form -->
+<div class="bg-surface-container-lowest p-6 rounded-[16px] shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-surface-container-highest flex items-start gap-4 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-[#EAF0FA] rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">outbox</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-[18px] font-semibold text-primary mb-1">Withdrawal Form</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Request funds withdrawal.</p>
+<div class="flex items-center gap-3 text-sm text-outline">
+<span>PDF</span>
+<span>•</span>
+<span>800 KB</span>
+</div>
+</div>
+<button aria-label="Download Withdrawal Form" class="bg-secondary text-on-secondary w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 hover:bg-opacity-90 transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<!-- Item 4: Benevolent Form -->
+<div class="bg-surface-container-lowest p-6 rounded-[16px] shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-surface-container-highest flex items-start gap-4 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-[#EAF0FA] rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-[18px] font-semibold text-primary mb-1">Benevolent Fund Form</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Application for benevolent fund support.</p>
+<div class="flex items-center gap-3 text-sm text-outline">
+<span>PDF</span>
+<span>•</span>
+<span>1.1 MB</span>
+</div>
+</div>
+<button aria-label="Download Benevolent Form" class="bg-secondary text-on-secondary w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 hover:bg-opacity-90 transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<!-- Item 5: By-Laws -->
+<div class="bg-surface-container-lowest p-6 rounded-[16px] shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-surface-container-highest flex items-start gap-4 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-[#E7F5EC] rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">gavel</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-[18px] font-semibold text-primary mb-1">SACCO By-Laws</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">The governing rules and regulations.</p>
+<div class="flex items-center gap-3 text-sm text-outline">
+<span>PDF</span>
+<span>•</span>
+<span>4.5 MB</span>
+</div>
+</div>
+<button aria-label="Download By-Laws" class="bg-secondary text-on-secondary w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 hover:bg-opacity-90 transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<!-- Item 6: Annual Reports -->
+<div class="bg-surface-container-lowest p-6 rounded-[16px] shadow-[0px_4px_20px_rgba(11,27,63,0.05)] border border-surface-container-highest flex items-start gap-4 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-[#E7F5EC] rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">query_stats</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-[18px] font-semibold text-primary mb-1">Annual Report 2023</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Financial performance and summary.</p>
+<div class="flex items-center gap-3 text-sm text-outline">
+<span>PDF</span>
+<span>•</span>
+<span>8.2 MB</span>
+</div>
+</div>
+<button aria-label="Download Annual Report" class="bg-secondary text-on-secondary w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 hover:bg-opacity-90 transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container text-on-primary-fixed grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap w-full opacity-90 hover:opacity-100 transition-opacity">
+<div class="col-span-1 md:col-span-4 mb-8">
+<span class="font-display-lg text-display-lg text-secondary-fixed tracking-tight">Hoechem SACCO Ltd.</span>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-headline-md text-[18px] font-bold text-on-primary mb-2">Navigation</h4>
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors" href="#">About Us</a>
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors" href="#">Membership</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-headline-md text-[18px] font-bold text-on-primary mb-2">Services</h4>
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors" href="#">Loans</a>
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors" href="#">Savings</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-headline-md text-[18px] font-bold text-on-primary mb-2">Information</h4>
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors" href="#">News &amp; Events</a>
+<a class="font-body-md text-body-md text-secondary-fixed hover:text-on-primary transition-colors" href="#">Resources</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-headline-md text-[18px] font-bold text-on-primary mb-2">Support</h4>
+<a class="font-body-md text-body-md text-surface-variant hover:text-on-primary transition-colors" href="#">Contact Us</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-surface-tint">
+<p class="font-body-md text-body-md text-surface-variant text-center">© 2024 Hoechem SACCO Ltd. Together, We Build Better Futures.</p>
+</div>
+</footer>
+</body></html>

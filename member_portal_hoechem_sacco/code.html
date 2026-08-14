@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-surface-container-low dark:bg-surface-dim">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoechem SACCO - Member Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#7684ae",
+                    "surface-container-highest": "#e1e2e4",
+                    "on-tertiary-fixed-variant": "#604100",
+                    "tertiary": "#050200",
+                    "background": "#f8f9fb",
+                    "primary-fixed-dim": "#b7c5f3",
+                    "on-secondary-fixed": "#00210d",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#ffddae",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#edeef0",
+                    "on-tertiary-container": "#b27a01",
+                    "inverse-on-surface": "#f0f1f3",
+                    "on-primary-fixed": "#091a3e",
+                    "surface-bright": "#f8f9fb",
+                    "primary": "#00020d",
+                    "secondary-fixed-dim": "#78db95",
+                    "primary-container": "#0b1b3f",
+                    "surface-tint": "#4f5d85",
+                    "secondary": "#006d38",
+                    "surface-variant": "#e1e2e4",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c5c6cf",
+                    "primary-fixed": "#dae2ff",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#94f8af",
+                    "surface": "#f8f9fb",
+                    "on-background": "#191c1e",
+                    "tertiary-container": "#2a1a00",
+                    "on-primary-fixed-variant": "#38466c",
+                    "on-secondary-container": "#00743c",
+                    "surface-container-high": "#e7e8ea",
+                    "on-surface": "#191c1e",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#75777f",
+                    "inverse-surface": "#2e3132",
+                    "on-secondary-fixed-variant": "#005229",
+                    "surface-dim": "#d9dadc",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#b7c5f3",
+                    "on-tertiary-fixed": "#281800",
+                    "tertiary-fixed-dim": "#fcbb4a",
+                    "secondary-container": "#94f8af",
+                    "on-surface-variant": "#45464e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px",
+                    "2xl": "1rem"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "base": "4px",
+                    "margin-mobile": "16px",
+                    "section-gap": "80px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Inter"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "body-lg": [
+                            "17px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-sm": [
+                            "13px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "15px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Soft Shadows */
+        .card-shadow {
+            box-shadow: 0px 4px 20px rgba(11, 27, 63, 0.05);
+        }
+    </style>
+</head>
+<body class="h-full bg-background font-body-md text-on-surface antialiased overflow-x-hidden flex flex-col md:flex-row">
+
+    <!-- View State Management Script -->
+    <script>
+        function toggleView(viewId) {
+            document.querySelectorAll('.view-screen').forEach(el => el.classList.add('hidden'));
+            document.getElementById(viewId).classList.remove('hidden');
+        }
+    </script>
+
+    <!-- ========================================== -->
+    <!-- SCREEN 1: LOGIN -->
+    <!-- ========================================== -->
+    <div id="login-view" class="view-screen w-full min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden hidden">
+        
+        <!-- Ambient Background Decoration -->
+        <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary-container opacity-5 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary opacity-5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-md w-full space-y-8 bg-surface-container-lowest p-8 rounded-2xl card-shadow relative z-10">
+            <div>
+                <div class="flex justify-center text-primary">
+                    <span class="material-symbols-outlined filled-icon text-5xl">account_balance</span>
+                </div>
+                <h2 class="mt-6 text-center font-display-lg-mobile text-primary tracking-tight">Hoechem SACCO Ltd.</h2>
+                <p class="mt-2 text-center font-headline-md text-on-surface-variant">Member Portal Login</p>
+            </div>
+            
+            <form class="mt-8 space-y-6" action="#" method="POST" onsubmit="event.preventDefault(); toggleView('dashboard-view');">
+                <div class="space-y-4">
+                    <div>
+                        <label for="member-id" class="block font-label-sm text-on-surface">Member / ID Number</label>
+                        <div class="mt-1">
+                            <input id="member-id" name="member-id" type="text" autocomplete="username" required class="appearance-none block w-full px-4 py-3 border border-outline-variant rounded-xl shadow-sm placeholder-outline focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary sm:text-sm font-body-md text-on-surface bg-surface-container-lowest transition-colors" placeholder="Enter your member ID">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="password" class="block font-label-sm text-on-surface">Password</label>
+                        <div class="mt-1">
+                            <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none block w-full px-4 py-3 border border-outline-variant rounded-xl shadow-sm placeholder-outline focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary sm:text-sm font-body-md text-on-surface bg-surface-container-lowest transition-colors" placeholder="Enter your password">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-primary focus:ring-primary border-outline-variant rounded cursor-pointer">
+                        <label for="remember-me" class="ml-2 block font-body-md text-on-surface-variant cursor-pointer">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <div class="text-sm">
+                        <a href="#" class="font-label-sm text-primary hover:text-secondary transition-colors">
+                            Forgot password?
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm font-label-sm text-on-primary bg-primary hover:bg-primary-container focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all active:scale-[0.98]">
+                        Login to Portal
+                    </button>
+                </div>
+                
+                <div class="relative mt-8">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-outline-variant"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-2 bg-surface-container-lowest text-on-surface-variant font-body-md">New member?</span>
+                    </div>
+                </div>
+                
+                <div class="mt-6">
+                    <button type="button" class="w-full flex justify-center py-3 px-4 border border-secondary rounded-xl shadow-sm font-label-sm text-secondary bg-surface-container-lowest hover:bg-secondary-fixed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary transition-all active:scale-[0.98]">
+                        Register for Portal
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- SCREEN 2: DASHBOARD -->
+    <!-- ========================================== -->
+    <div id="dashboard-view" class="view-screen w-full flex flex-col md:flex-row h-screen">
+        
+        <!-- JSON Nav Drawer (Sidebar for Web, Hidden on Mobile for this example to focus on canvas) -->
+        <!-- Normally TopAppBar + BottomNav on mobile, but keeping it simpler per prompt 'Sidebar nav' -->
+        <nav class="hidden md:flex flex-col bg-surface dark:bg-surface-dim border-r border-outline-variant shadow-lg fixed left-0 top-0 h-full w-80 z-50 overflow-y-auto">
+            <!-- Header -->
+            <div class="p-margin-mobile border-b border-outline-variant">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+                        <span class="material-symbols-outlined">person</span>
+                    </div>
+                    <div>
+                        <h2 class="font-headline-md text-primary dark:text-inverse-primary truncate profile_title">Member Services</h2>
+                        <p class="font-body-md text-on-surface-variant truncate sub_text">Secure Financial Solutions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex-1 py-4 flex flex-col gap-1 px-2">
+                <!-- Active Item: Home (Dashboard) -->
+                <a href="#" class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-lg mx-2 my-1 transition-all duration-300">
+                    <span class="material-symbols-outlined filled-icon">home</span>
+                    <span class="font-label-sm text-label-sm">Dashboard</span>
+                </a>
+                
+                <!-- Inactive Items -->
+                <a href="#" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg mx-2 my-1 transition-all duration-300">
+                    <span class="material-symbols-outlined">savings</span>
+                    <span class="font-label-sm text-label-sm">Savings</span>
+                </a>
+                
+                <a href="#" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg mx-2 my-1 transition-all duration-300">
+                    <span class="material-symbols-outlined">payments</span>
+                    <span class="font-label-sm text-label-sm">Loans</span>
+                </a>
+                
+                <a href="#" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg mx-2 my-1 transition-all duration-300">
+                    <span class="material-symbols-outlined">description</span>
+                    <span class="font-label-sm text-label-sm">Statements</span>
+                </a>
+
+                <a href="#" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg mx-2 my-1 transition-all duration-300">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="font-label-sm text-label-sm">Profile</span>
+                </a>
+            </div>
+
+            <div class="p-4 mt-auto border-t border-outline-variant">
+                 <button onclick="toggleView('login-view')" class="flex items-center gap-3 px-4 py-3 w-full text-error hover:bg-error-container rounded-lg transition-all duration-300">
+                    <span class="material-symbols-outlined">logout</span>
+                    <span class="font-label-sm text-label-sm">Logout</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Canvas -->
+        <main class="flex-1 md:ml-80 h-full overflow-y-auto bg-background">
+            
+            <!-- Mobile Header (Visible only on small screens) -->
+            <header class="md:hidden flex items-center justify-between p-4 bg-surface-container-lowest border-b border-outline-variant shadow-sm sticky top-0 z-40">
+                <div class="flex items-center gap-2 text-primary">
+                    <span class="material-symbols-outlined">account_balance</span>
+                    <span class="font-headline-md font-bold">Hoechem SACCO</span>
+                </div>
+                <button class="p-2 text-on-surface-variant rounded-full hover:bg-surface-container-highest">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </header>
+
+            <div class="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-8">
+                
+                <!-- Page Header -->
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                    <div>
+                        <h1 class="font-display-lg text-primary tracking-tight">Welcome back, John</h1>
+                        <p class="font-body-md text-on-surface-variant mt-1">Here is a summary of your accounts as of today.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <button class="px-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm font-label-sm text-primary hover:bg-surface-container-highest transition-colors flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">download</span>
+                            Statement
+                        </button>
+                        <button class="px-4 py-2 bg-primary rounded-xl shadow-sm font-label-sm text-on-primary hover:bg-primary-container transition-colors flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">add</span>
+                            Deposit
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Summary Cards (Bento-ish Grid) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                    
+                    <!-- Savings -->
+                    <div class="bg-surface-container-lowest rounded-2xl p-6 card-shadow border border-surface-container-highest flex flex-col relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 text-secondary">
+                            <span class="material-symbols-outlined text-6xl">savings</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-[#E7F5EC] flex items-center justify-center text-secondary">
+                                <span class="material-symbols-outlined">savings</span>
+                            </div>
+                            <h3 class="font-label-sm text-on-surface-variant">Total Savings</h3>
+                        </div>
+                        <div class="font-display-lg-mobile text-primary">KES 450,200</div>
+                        <div class="mt-2 text-sm text-secondary font-label-sm flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">trending_up</span>
+                            +12% this year
+                        </div>
+                    </div>
+
+                    <!-- Loans -->
+                    <div class="bg-surface-container-lowest rounded-2xl p-6 card-shadow border border-surface-container-highest flex flex-col relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 text-error">
+                            <span class="material-symbols-outlined text-6xl">account_balance_wallet</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-[#EAF0FA] flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">payments</span>
+                            </div>
+                            <h3 class="font-label-sm text-on-surface-variant">Active Loan Balance</h3>
+                        </div>
+                        <div class="font-display-lg-mobile text-primary">KES 120,500</div>
+                        <div class="mt-2 font-body-md text-on-surface-variant text-sm">Next payment due: 15th Oct</div>
+                    </div>
+
+                    <!-- Next Contribution -->
+                    <div class="bg-surface-container-lowest rounded-2xl p-6 card-shadow border border-surface-container-highest flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+                                <span class="material-symbols-outlined">event</span>
+                            </div>
+                            <h3 class="font-label-sm text-on-surface-variant">Next Contribution</h3>
+                        </div>
+                        <div class="font-display-lg-mobile text-primary">KES 15,000</div>
+                        <div class="mt-4 flex items-center gap-2">
+                             <div class="flex-1 bg-surface-variant rounded-full h-2 overflow-hidden">
+                                <div class="bg-primary h-full w-3/4 rounded-full"></div>
+                            </div>
+                            <span class="text-xs font-label-sm text-on-surface-variant">75%</span>
+                        </div>
+                    </div>
+
+                    <!-- Dividends -->
+                    <div class="bg-primary text-on-primary rounded-2xl p-6 shadow-lg flex flex-col relative overflow-hidden">
+                         <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full -mr-10 -mt-10 blur-xl"></div>
+                        <div class="flex items-center gap-3 mb-4 relative z-10">
+                            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-on-primary">
+                                <span class="material-symbols-outlined">redeem</span>
+                            </div>
+                            <h3 class="font-label-sm text-primary-fixed-dim">Projected Dividends</h3>
+                        </div>
+                        <div class="font-display-lg-mobile text-on-primary relative z-10">KES 32,400</div>
+                        <button class="mt-auto self-start text-sm font-label-sm text-secondary-fixed flex items-center gap-1 hover:underline">
+                            View details <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Main Content Area -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Recent Transactions (2/3 width) -->
+                    <div class="lg:col-span-2 bg-surface-container-lowest rounded-2xl card-shadow border border-surface-container-highest overflow-hidden">
+                        <div class="p-6 border-b border-surface-container-highest flex justify-between items-center">
+                            <h2 class="font-headline-md text-primary">Recent Transactions</h2>
+                            <button class="text-sm font-label-sm text-primary hover:text-secondary transition-colors">View All</button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-xs uppercase tracking-wider">
+                                        <th class="p-4 font-semibold">Date</th>
+                                        <th class="p-4 font-semibold">Description</th>
+                                        <th class="p-4 font-semibold">Type</th>
+                                        <th class="p-4 font-semibold text-right">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-surface-container-highest font-body-md text-sm">
+                                    <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                        <td class="p-4 text-on-surface-variant">01 Oct 2024</td>
+                                        <td class="p-4 font-medium text-primary">Monthly Contribution</td>
+                                        <td class="p-4"><span class="px-2 py-1 rounded-full bg-[#E7F5EC] text-secondary text-xs font-label-sm">Deposit</span></td>
+                                        <td class="p-4 text-right font-medium text-secondary">+ KES 15,000</td>
+                                    </tr>
+                                    <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                        <td class="p-4 text-on-surface-variant">28 Sep 2024</td>
+                                        <td class="p-4 font-medium text-primary">Development Loan Repayment</td>
+                                        <td class="p-4"><span class="px-2 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-label-sm">Payment</span></td>
+                                        <td class="p-4 text-right font-medium text-primary">- KES 8,500</td>
+                                    </tr>
+                                    <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                        <td class="p-4 text-on-surface-variant">15 Sep 2024</td>
+                                        <td class="p-4 font-medium text-primary">Emergency Loan Disbursement</td>
+                                        <td class="p-4"><span class="px-2 py-1 rounded-full bg-[#EAF0FA] text-primary text-xs font-label-sm">Loan</span></td>
+                                        <td class="p-4 text-right font-medium text-primary">+ KES 50,000</td>
+                                    </tr>
+                                    <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                        <td class="p-4 text-on-surface-variant">01 Sep 2024</td>
+                                        <td class="p-4 font-medium text-primary">Monthly Contribution</td>
+                                        <td class="p-4"><span class="px-2 py-1 rounded-full bg-[#E7F5EC] text-secondary text-xs font-label-sm">Deposit</span></td>
+                                        <td class="p-4 text-right font-medium text-secondary">+ KES 15,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Quick Actions & Mini Charts -->
+                    <div class="space-y-6">
+                        
+                        <!-- Quick Actions -->
+                        <div class="bg-surface-container-lowest rounded-2xl p-6 card-shadow border border-surface-container-highest">
+                             <h2 class="font-headline-md text-primary mb-4">Quick Actions</h2>
+                             <div class="grid grid-cols-2 gap-4">
+                                 <button class="flex flex-col items-center justify-center p-4 rounded-xl border border-outline-variant hover:border-secondary hover:bg-[#E7F5EC] hover:text-secondary transition-all group text-on-surface">
+                                     <span class="material-symbols-outlined text-3xl mb-2 text-on-surface-variant group-hover:text-secondary">add_circle</span>
+                                     <span class="font-label-sm text-sm">Apply Loan</span>
+                                 </button>
+                                 <button class="flex flex-col items-center justify-center p-4 rounded-xl border border-outline-variant hover:border-primary hover:bg-[#EAF0FA] hover:text-primary transition-all group text-on-surface">
+                                     <span class="material-symbols-outlined text-3xl mb-2 text-on-surface-variant group-hover:text-primary">sync_alt</span>
+                                     <span class="font-label-sm text-sm">Transfer</span>
+                                 </button>
+                                 <button class="flex flex-col items-center justify-center p-4 rounded-xl border border-outline-variant hover:border-primary hover:bg-[#EAF0FA] hover:text-primary transition-all group text-on-surface">
+                                     <span class="material-symbols-outlined text-3xl mb-2 text-on-surface-variant group-hover:text-primary">receipt_long</span>
+                                     <span class="font-label-sm text-sm">Statements</span>
+                                 </button>
+                                  <button class="flex flex-col items-center justify-center p-4 rounded-xl border border-outline-variant hover:border-primary hover:bg-[#EAF0FA] hover:text-primary transition-all group text-on-surface">
+                                     <span class="material-symbols-outlined text-3xl mb-2 text-on-surface-variant group-hover:text-primary">support_agent</span>
+                                     <span class="font-label-sm text-sm">Support</span>
+                                 </button>
+                             </div>
