@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* HOECHEM SACCO Design Tokens */
+:root {
+  --primary: #00020d;
+  --primary-container: #0b1b3f;
+  --secondary: #006d38;
+  --secondary-container: #94f8af;
+  --surface: #f8f9fb;
+  --surface-container-lowest: #ffffff;
+  --outline: #75777f;
+  --outline-variant: #c5c6cf;
+  --error: #ba1a1a;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: #f8f9fb;
+  color: #191c1e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Theme mode */
+html.dark body,
+html[data-theme='dark'] body {
+  background-color: #111827;
+  color: #f8fafc;
+}
+
+html.dark [class~="bg-white"], html[data-theme='dark'] [class~="bg-white"],
+html.dark [class*="bg-[#f8f9fb]"], html[data-theme='dark'] [class*="bg-[#f8f9fb]"],
+html.dark [class*="bg-[#f2f4f6]"], html[data-theme='dark'] [class*="bg-[#f2f4f6]"] {
+  background-color: #172033 !important;
+}
+
+html.dark [class*="text-[#00020d]"], html[data-theme='dark'] [class*="text-[#00020d]"],
+html.dark [class*="text-[#191c1e]"], html[data-theme='dark'] [class*="text-[#191c1e]"] {
+  color: #f8fafc !important;
+}
+
+html.dark [class*="text-[#45464e]"], html[data-theme='dark'] [class*="text-[#45464e]"],
+html.dark [class*="text-[#75777f]"], html[data-theme='dark'] [class*="text-[#75777f]"] {
+  color: #cbd5e1 !important;
+}
+
+html.dark [class*="border-[#e1e2e4]"], html[data-theme='dark'] [class*="border-[#e1e2e4]"],
+html.dark [class*="border-[#c5c6cf]"], html[data-theme='dark'] [class*="border-[#c5c6cf]"] {
+  border-color: #334155 !important;
+}
+
+html.dark .theme-toggle,
+html[data-theme='dark'] .theme-toggle {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #94f8af;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Card shadow utility */
+.card-shadow {
+  box-shadow: 0px 4px 20px rgba(11, 27, 63, 0.05);
+}
+
+.card-shadow-md {
+  box-shadow: 0px 4px 20px rgba(11, 27, 63, 0.10);
+}
+
+.card-shadow-lg {
+  box-shadow: 0px 8px 24px rgba(11, 27, 63, 0.12);
+}
+
+/* Float animation for hero badges */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float 7s ease-in-out infinite reverse;
+}
+
+/* Sidebar nav scrollbar */
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: #c5c6cf;
+  border-radius: 4px;
+}
+
+/* Custom scrollbar for tables */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f2f4f6;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #c5c6cf;
+  border-radius: 2px;
+}
+
+/* Input focus styles */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  grid: none;
+}
+
+/* Hover transitions */
+a,
+button {
+  transition-property: color, background-color, border-color, opacity, transform, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, #0b1b3f 0%, #1a3060 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #006d38 0%, #00a854 100%);
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e7e8ea 25%, #f2f4f6 50%, #e7e8ea 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Toast overrides */
+.react-hot-toast {
+  font-family: 'Inter', sans-serif !important;
+}

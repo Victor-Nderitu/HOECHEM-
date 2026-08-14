@@ -3,31 +3,27 @@
   "private": true,
   "version": "1.0.0",
   "description": "HOECHEM SACCO Digital Platform — Monorepo",
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "npm@10.9.3",
+  "workspaces": ["frontend"],
   "engines": {
     "node": ">=20.0.0",
-    "pnpm": ">=9.0.0"
+    "npm": ">=10.0.0"
   },
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "test": "turbo run test",
-    "lint": "turbo run lint",
+    "dev": "npm run dev --workspace=hoechem-web",
+    "build": "npm run build --workspace=hoechem-web",
+    "test": "npm run test --workspace=hoechem-web --if-present",
+    "lint": "npm run lint --workspace=hoechem-web",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
-    "type-check": "turbo run type-check",
-    "db:generate": "pnpm --filter @hoechem/api db:generate",
-    "db:migrate": "pnpm --filter @hoechem/api db:migrate",
-    "db:seed": "pnpm --filter @hoechem/api db:seed",
-    "db:push": "pnpm --filter @hoechem/api db:push"
+    "type-check": "npm run type-check --workspace=hoechem-web",
+    "db:generate": "npm --prefix backend run db:generate",
+    "db:migrate": "npm --prefix backend run db:migrate",
+    "db:seed": "npm --prefix backend run db:seed",
+    "db:push": "npm --prefix backend run db:push"
   },
   "devDependencies": {
     "turbo": "^2.3.3",
     "prettier": "^3.3.3",
     "typescript": "^5.6.3"
-  },
-  "pnpm": {
-    "overrides": {
-      "esbuild": "^0.24.0"
-    }
   }
 }
